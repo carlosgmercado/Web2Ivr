@@ -32,14 +32,14 @@ public class RestfulClient {
 		
 		RestTemplate restTemplate = ctx.getBean("restTemplate",RestTemplate.class);
 		
-		batchdetails = restTemplate.getForObject(URL_GET_WORKING_BATCHDETAIL, BatchDetails.class, 0);
+		batchdetails = restTemplate.getForObject(URL_GET_WORKING_BATCHDETAIL, BatchDetails.class, 5);
 		int i=1;
 		for (BatchDetail batchdetail: batchdetails.getBatchdetails()) {
 			
 			if (i%200 == 0){
 				try {
 					System.out.println("Running total called :"+i);
-				Thread.sleep(60000);
+				Thread.sleep(100000);
 				}
 				catch (Exception e){
 					

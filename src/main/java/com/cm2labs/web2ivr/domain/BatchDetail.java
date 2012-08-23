@@ -53,6 +53,7 @@ public class BatchDetail implements Serializable {
 	private String phone;
 	private String status;
 	private DateTime time_stamp;
+	private Long totalCallTime;
 	
 	
 	
@@ -93,11 +94,18 @@ public class BatchDetail implements Serializable {
 	public String getStatus() {
 		return status;
 	}
-
-	
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	@Column(name = "total_call_time")
+	public Long getTotalCallTime() {
+		return totalCallTime;
+	}
+
+	public void setTotalCallTime(Long totalCallTime) {
+		this.totalCallTime = totalCallTime;
+	}
+	
 
 	@Column(name = "time_stamp")
 	@Type(type="org.joda.time.contrib.hibernate.PersistentDateTime")
@@ -124,7 +132,7 @@ public class BatchDetail implements Serializable {
 	
 	public String toString() {
 		return "BatchDetail [id=" + id + ", batchid=" + batchid + ", phone="
-				+ phone + ", tropo version ="+phone2Tropo()+", status=" + status + ", time_stamp=" + DateTimeFormat.forPattern("YYYY-MM-dd hh:mm:ss").print(time_stamp)
+				+ phone + ", tropo version ="+phone2Tropo()+", status=" + status + ", time_stamp=" + DateTimeFormat.forPattern("YYYY-MM-dd hh:mm:ss").print(time_stamp)+" , total_call_time="+totalCallTime 
 				+ "]";
 	}
 

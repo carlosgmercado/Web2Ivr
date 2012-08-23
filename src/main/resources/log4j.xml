@@ -20,7 +20,7 @@
 	
 	<!-- Application Loggers -->
 	<logger name="com.cm2labs.web2ivr">
-		<level value="debug" />
+		<level value="ERROR" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->

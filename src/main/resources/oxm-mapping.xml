@@ -27,6 +27,9 @@
 	<field name="time_stamp" type="string" handler="dateHandler" >
 		<bind-xml name="time_stamp" node="element" />
 		</field>
+		<field name="totalCallTime" type="long" >
+		<bind-xml name="totalCallTime" node="element" />
+	</field>
 		
 </class>
 
