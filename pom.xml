@@ -246,6 +246,11 @@
         	<artifactId>tropo-webapi-java</artifactId>
         	<version>0.3</version>
         </dependency>
+        <dependency>
+        	<groupId>com.cm2labs.web2ivr</groupId>
+        	<artifactId>web2ivr-jpa-utility</artifactId>
+        	<version>1.0.0.CI-SNAPSHOT</version>
+        </dependency>
 	</dependencies>
 	<build>
 		<plugins>
